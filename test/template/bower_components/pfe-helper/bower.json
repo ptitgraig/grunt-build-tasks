@@ -1,0 +1,18 @@
+{
+    "author": {
+        "name": "T & S"
+    },
+    "name": "pfe-helper",
+    "keywords": [
+        "angular",
+        "pfe"
+    ],
+    "license": "BNPP PF Technology & Support",
+    "ignore": [],
+    "description": "Utils to improve angularJS development in PF-E",
+    "version": "1.0.1",
+    "main": ["./dist/pfe-helper.js"],
+    "dependencies": {
+        "angular-ui-router": "0.2.15"
+    }
+}

@@ -1,0 +1,76 @@
+# build compiled sources
+# created only for `package` task
+build:
+    - 'clean:dist'
+    - 'eslint:int'
+    - 'copy:index'
+    - 'injector:dist'
+    - 'wiredep:dist'
+    - 'copy:styles'
+    - 'copy:js'
+    - 'useminPrepare'
+    - 'concat'
+    - 'copy:dist'
+    - 'cssmin'
+    - 'uglify'
+    - 'filerev'
+    - 'filerev_assets:dist'
+    - 'cssurlrev:dist'
+    - 'usemin'
+    - 'htmlmin'
+    - 'clean:tmp'
+
+
+# build non-minified source files into a single ready-to-be-packaged folder
+# this task is used to create a package with raw sources
+bundle-src:
+    - 'copy:index'
+    - 'copy:bower_components'
+    - 'copy:all_src'
+    - 'injector:bundle'
+    - 'wiredep:bundle'
+
+
+# serve the application for development
+# use it for development
+serve:
+    - 'eslint:dev'
+    - 'wiredep:src'
+    - 'injector:src'
+    - 'configureProxies'
+    - 'connect:livereload'
+    - 'watch'
+
+
+# serve the application with compiled sources
+# use it when you want to check the result of the `build` task in a browser
+serve-dist:
+    - 'build'
+    - 'configureProxies'
+    - 'connect:dist:keepalive'
+
+
+# serve the application that sources
+# use it when you want to check the result of the `bundle-src` task in a browser
+serve-bundle-src:
+    - 'bundle-src'
+    - 'configureProxies'
+    - 'connect:dist:keepalive'
+
+
+# create a package from the built sources
+package:
+    # 1st step: creation of built source package
+    - 'clean:package'
+    - 'build'
+    - 'compress:dist'
+    - 'clean:dist'
+    # 2nd step: creation of raw source package
+    - 'package-src'
+
+
+# create a package from the bundled raw sources
+package-src:
+    - 'bundle-src'
+    - 'compress:src'
+    - 'clean:dist'

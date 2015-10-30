@@ -1,0 +1,11 @@
+{
+  "name": "angular",
+  "version": "1.4.5",
+  "main": "./angular.js",
+  "ignore": [],
+  "dependencies": {},
+  "_source": "nexus://angular/angular",
+  "_target": "1.4.5",
+  "_release": "1.4.5",
+  "_originalSource": "angular"
+}

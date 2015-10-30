@@ -1,0 +1,8 @@
+{
+  "name": "bootstrap",
+  "_source": "nexus://bootstrap/bootstrap",
+  "_target": "3.3.5",
+  "_release": "3.3.5",
+  "version": "3.3.5",
+  "_originalSource": "bootstrap"
+}

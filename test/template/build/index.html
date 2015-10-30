@@ -1,0 +1,39 @@
+<!doctype html>
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<title ng-bind="title">Sample PFE application</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="css/cdn.css">
+
+<link rel="stylesheet" href="css/app.css">
+
+<!--[if lte IE 9]><script type="text/javascript"> 
+			(
+			    function(w) {
+			        var console = {};
+			        console.log = function() {};
+                    console.error = function() {};
+			        w.console = console;
+			    }
+			)(window);
+        </script><![endif]-->
+<script src="js/cdn.js"></script>
+
+<script src="js/app.js"></script>
+</head>
+
+<body id="pfe" ng-app="pfe">
+<div ng-include="'modules/person/header.html'" class="header"></div>
+<div id="wrap">
+<div class="loggedin-view-content container-fluid">
+<div id="content" class="row" ui-view>
+<div class="col-sm-12">
+<p>Chargement en cours</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

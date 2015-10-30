@@ -1,0 +1,71 @@
+{
+
+  // T&S High Quality profile ruleset
+  // for more information see:
+  // http://personalfinance-technology-pf.sfdi.echonet/Support-teo/HTML5-JS/js/pfe-rulesets.html
+  // --------------------------------
+
+  "rules": {
+
+    // Blocking rules provoke errors
+    // -----------------------------
+    "no-eval": 2,
+    "no-multi-str": 2,
+    "no-debugger": 2,
+    "comma-dangle": 2,
+    "no-bitwise": 2,
+
+    // Critical rules provoke errors
+    // -----------------------------
+    "no-octal": 2,
+    "no-new": 2,
+    "no-loop-func": 2,
+    "eqeqeq": 2,
+    "no-with": 2,
+    "guard-for-in": 2,
+    "no-new-wrappers": 2,
+    "no-array-constructor": 2,
+    "no-extend-native":2,
+    "no-undef": 2,
+    "strict": 2,
+    "no-iterator": 2,
+    "no-sparse-arrays": 2,
+    "no-obj-calls": 2,
+    "use-isnan": 2,
+    "no-implied-eval": 2,
+    "no-delete-var": 2,
+
+    // Major rules provoke warnings
+    // ----------------------------
+    "no-sequences": 1,
+    "no-dupe-keys": 1,
+    "no-unused-vars": 1,
+    "no-use-before-define": [1, "nofunc"],
+    "curly": 1,
+    "semi": 1,
+    "no-unreachable": 1,
+    "no-fallthrough": 1,
+    "no-new-object": 1,
+    "wrap-iife": [1, "inside"],
+    "new-cap": 1,
+    "valid-typeof": 1,
+    "no-undef": 1,
+    "no-unused-expressions": 1,
+    "no-proto": 1,
+    "no-ex-assign": 1,
+    "no-extra-semi": 1,
+    "no-self-compare": 1,
+    "radix": 1,
+    "no-shadow-restricted-names": 1,
+    "no-undef-init": 1,
+    "no-undefined": 1
+  },
+  "env": {
+    "browser": true,
+    "jquery": true
+  },
+  "globals": {
+    "angular": true,
+    "toastr": true
+  }
+}

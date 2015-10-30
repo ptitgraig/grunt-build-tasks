@@ -1,0 +1,92 @@
+<div class="search-view col-sm-4 well well-lg">
+    <h3 class="search-h3">Créer une personne</h3>
+    <form class="create-person-form" ng-submit="vm.createPerson()">
+
+        <div class="control-group mb20">
+            <div class="controls">
+                <input type="text" class="form-control" id="firstname-input" name="firstname" placeholder="Prénom" value=""
+                       ng-model="firstname" required>
+                <span ng-show="form.firstname.$dirty && form.firstname.$error.required" class="help-block">
+                    Le prénom est requis !!</span>
+            </div>
+        </div>
+        <div class="control-group mb20">
+            <div class="controls">
+                <input type="text" class="form-control" id="lastname-input" name="lastname" placeholder="Nom" value=""
+                       ng-model="lastname" no-validate>
+                <span ng-show="form.lastname.$dirty && form.lastname.$error.required" class="help-block">Le nom est requis</span>
+            </div>
+        </div>
+        <div class="controls mb20">
+            <label for="birthdate-input">Date de naissance</label>
+            <input type="date" class="form-control" id="birthdate-input" name="birthdate" ng-model="birthdate" no-validate>
+            <span ng-show="form.birthdate.$dirty && form.birthdate.$error.required" class="help-block">
+                La date de naissance est requise</span>
+        </div>
+
+        <div class="form-group">
+            <button id="createPersonSubmit" type="submit" class="btn btn-lg btn-primary">Envoyer</button>
+        </div>
+
+        <div class="form-group" ng-if="vm.moreThanOnePerson">
+            <a id="deletePerson" ng-click="vm.deleteAll()" class="btn btn-xs btn-block btn-danger">
+                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                Supprimer toutes les personnes
+            </a>
+        </div>
+
+    </form>
+    <hr/>
+    <h3 class="search-h3">Rechercher par nom</h3>
+    <form class="search-name-form" ng-submit="vm.findByLastName()">
+        <div class="control-group mb20">
+            <div class="controls">
+                <input type="text" class="form-control" id="find-lastname-input" name="findlastname" placeholder="Nom" value=""
+                       ng-model="findlastname" required>
+                <span ng-show="form.findlastname.$dirty && form.findlastname.$error.required" class="help-block">Un nom est requis</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <button id="searchLastNameSubmit" type="submit" class="btn btn-default">Chercher</button>
+        </div>
+    </form>
+    <hr/>
+    <button class="btn btn-warning btn-block" ng-click="vm.triggerBusinessException()">Action qui déclanche une Business Exception</button><br/>
+    <button class="btn btn-warning btn-block" ng-click="vm.triggerTechnicalException()">Action qui déclanche une Technical Exception</button><br/>
+</div>
+<div class="col-sm-8 res-det-view">
+    <div class="row">
+        <div class="list-view col-sm-12">
+            <div class="results">
+
+
+                <div ng-if="!vm.isSearch">
+                    <h3>Toutes les personnes</h3>
+                    <p  ng-show="vm.error" class="alert alert-danger">{{vm.error}}</p>
+                    <dl ng-repeat="person in vm.persons" class="dl-horizontal">
+                        <dt>Nom:</dt>
+                        <dd>{{person.nom}}</dd>
+                        <dt>Prenom:</dt>
+                        <dd>{{person.prenom}}</dd>
+                        <dt>Date de naissance:</dt>
+                        <dd>{{person.dateNaissance}}</dd>
+                    </dl>
+                </div>
+
+                <div ng-if="vm.isSearch">
+                    <h3>Résultats de la recherche</h3>
+                    <p  ng-show="vm.error" class="alert alert-danger" ng-model="error">{{vm.error}}</p>
+                    <dl ng-repeat="person in vm.personsFound" class="dl-horizontal">
+                        <dt>Nom:</dt>
+                        <dd>{{person.nom}}</dd>
+                        <dt>Prenom:</dt>
+                        <dd>{{person.prenom}}</dd>
+                        <dt>Date de naissance:</dt>
+                        <dd>{{person.dateNaissance}}</dd>
+                    </dl>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,289 @@
+/*
+ * Specifi PPE Agence styles
+ */
+html {
+	height: 100%;
+	padding-top: 50px;
+}
+
+body {
+    height: 100%;
+    font-size: 13px;
+}
+
+#wrap {
+    min-height: 85%;
+    height: 100%;
+}
+
+#content {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	overflow: hidden;
+    height: 100%;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+ul {
+    padding-left: 0;
+}
+
+table, tr, tbody, td {
+	vertical-align: middle;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.parsley-error-list {
+    color: red;
+}
+
+.hero-unit {
+	padding: 30px 20px 30px 20px;
+	margin: 30px 20px 20px 20px;
+}
+
+.navbar-header {
+    float: none;
+}
+
+.navbar-default {
+    background-color: #fff;
+    border-color: #00965e;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover {
+    color: #333;
+    font-weight: 700;
+}
+
+.navbar-default .navbar-brand img {
+    margin-right:10px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+/*
+ * FORMS
+ */
+
+#login-form{
+	padding-left: 80px;
+	padding-right: 80px;
+}
+
+#logged-in-template .well {
+    border:0;
+}
+
+#logged-in-template>div {
+    height: 100%;
+}
+
+.form-control:focus {
+    border-color: #00965e;
+    box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px rgba(0, 150, 94, 0.6)
+}
+
+.search-view, .res-det-view {
+    height: 100%;
+}
+
+.res-det-view>.row {
+    height: 100%;
+    border-bottom:1px solid #eee;
+    background-color: #e7e7e7;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.form-control {
+    border-radius: 2px;
+    padding:3px;
+    font-size:12px;
+}
+
+input.form-control {
+    padding-left:8px;
+}
+
+#main-view, #loggedin-view {
+    height: 100%;
+}
+
+.loggedin-view-content {
+    height: 100%;
+}
+
+
+.control-label {
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.overdraft>.input-group{
+    margin-bottom: 5px;
+}
+.overdraft .control-label {
+    display: block;
+}
+
+.form-group>.search-overdraft-ipt {
+    margin-right: 3.5%;
+}
+
+
+/*
+ * IMAGES
+ */
+img.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/*
+ * BUTTONS
+ */
+.btn-lg {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.btn-primary {
+    background-color: #00965e;
+    border-color: #00965e;
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+    background-color: #00633e;
+    border-color: #00633e;
+}
+
+/*
+ * PANELS
+ */
+.well-lg {
+    border-radius: 3px;
+}
+.search-view.well-lg {
+    padding:5px 8px 8px 18px;
+}
+
+.search-overdraft-ipt {
+    width:47%;
+    float: left;
+}
+
+.search-view button[type="submit"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:100%;
+}
+
+.results-view, .details-view {
+    padding-left: 0;
+}
+
+
+/*
+ * TABLES
+ */
+.table-bordered {
+    border-left: 0;
+    background-color: #fff;
+}
+
+.table thead > tr > th {
+    background-color: #737373;
+    color:#efefef;
+    font-size: 11px;
+}
+
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td {
+    border-left: 0;
+}
+
+.table-striped>tbody>tr:nth-of-type(even) {
+    background-color:#fff;
+}
+.table-striped>tbody>tr:nth-of-type(even) {
+    background-color:#fff;
+}
+
+.table-details {
+    table-layout: fixed;
+}
+.table-details td,.table-details th  {
+    width:33%;
+}
+
+.result-row:hover {
+    cursor: pointer;
+}
+
+.result-row:hover td,
+.result-row:hover th,
+.table-striped > tbody > tr.result-row:hover:nth-child(odd) > th,
+.table-striped > tbody > tr.result-row:hover:nth-child(odd) > td{
+    background-color:#ccdfd8;
+}
+
+/*
+ * TYPO
+ */
+
+.search-h3 {
+    margin: 0 0 12px 0;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 0;
+}
+
+/*
+ * TABS
+ */
+.nav-tabs > li > a {
+    border-radius: 0;
+}
+
+/*.dl-horizontal dt {
+    width:49%;
+}
+.dl-horizontal dd {
+    margin-left: 51%;
+}*/
+
+.dl-horizontal {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom:1px dashed #ccc;
+}
+
+.dl-horizontal dt,.dl-horizontal dd {
+    font-size: 17px;
+}
+
